@@ -1,17 +1,23 @@
-# calculator_app
+# Calculadora App
 
-A new Flutter project.
+App móvil de calculadora hecha con Flutter para la evaluacion.
 
-## Getting Started
+## Funciones
+- Sumar, restar, multiplicar y dividir
+- C (borra un carácter) y CE (borra todo)
+- Manejo de división entre cero
+- Pantalla de información del desarrollador
+- Navegación entre pantallas con rutas
+- Paleta de colores blanco y dorado oscuro
 
-This project is a starting point for a Flutter application.
+## Estructura
+lib/
+- main.dart
+- routes/app_routes.dart
+- screens/home_screen.dart, info_screen.dart
+- widgets/calc_button.dart
+- theme/app_colors.dart
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Autor
+ github.com/Guill07
