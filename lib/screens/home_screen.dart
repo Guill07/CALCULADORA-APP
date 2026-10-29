@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../routes/app_routes.dart';
 import '../theme/app_colors.dart';
 import '../widgets/calc_button.dart';
 
@@ -151,6 +152,12 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.darkGold,
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () => Navigator.pushNamed(context, AppRoutes.info),
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(
