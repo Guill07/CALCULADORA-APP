@@ -11,7 +11,7 @@ class CalculatorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Calculator',
+      title: 'Calculadora',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       initialRoute: AppRoutes.home,

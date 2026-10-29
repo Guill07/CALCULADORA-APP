@@ -24,6 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
     ['0', '.'],
   ];
 
+  // Small text above the display, e.g. "12 +"
+  String get _expression {
+    if (_operator == null || _firstNumber == null) return '';
+    return '${_formatResult(_firstNumber!)} $_operator';
+  }
+
   void _onButtonPressed(String value) {
     setState(() {
       if (['+', '-', '×', '÷'].contains(value)) {
@@ -148,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text('Calculator'),
+        title: const Text('Calculadora'),
         backgroundColor: AppColors.background,
         foregroundColor: AppColors.darkGold,
         centerTitle: true,
@@ -168,13 +174,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(24),
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
-                  child: Text(
-                    _display,
-                    style: const TextStyle(
-                      fontSize: 72,
-                      color: AppColors.textDark,
-                      fontWeight: FontWeight.w300,
-                    ),
+                  alignment: Alignment.bottomRight,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        _expression.isEmpty ? ' ' : _expression,
+                        style: const TextStyle(
+                          fontSize: 28,
+                          color: AppColors.darkGold,
+                        ),
+                      ),
+                      Text(
+                        _display,
+                        style: const TextStyle(
+                          fontSize: 72,
+                          color: AppColors.textDark,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
